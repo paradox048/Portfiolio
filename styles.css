@@ -32,7 +32,7 @@
     position: relative;
     right: 3px; /* Make it align with the subtitle */
 }
-
+ 
 .menu-box .subtitle {
     bottom: -10px;
     margin-bottom: 40px;
@@ -44,4 +44,23 @@
 
 .menu-box .menu-items div {
     margin: 20px auto;
+    font-weight: bold;
+}
+
+.menu-box .ink {
+    width: 400px;
+    height: auto;
+}
+
+.menu-container .menu-container-intro {
+    text-align: left;
+    /* Move the text all the way to the right in a small rectangle */
+    position: absolute;
+    margin: 80px;
+    bottom: 50px;
+    right: 5px;
+    width: 15%;
+    /*  make the text justified */
+    text-align: left;
+    flex-direction: column;
 }
