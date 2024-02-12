@@ -1,7 +1,13 @@
 * {
     background-color: #FAF9F6;
     font-family: 'Courier New', monospace;
+    box-sizing: border-box;
 }
+
+.underline {
+    text-decoration: underline;
+}
+
 .menu-container {
     position: fixed;
     display: flex;
@@ -47,6 +53,11 @@
     font-weight: bold;
 }
 
+.menu-item-projects {
+    cursor: pointer;
+}
+
+
 .menu-box .ink {
     width: 400px;
     height: auto;
@@ -64,3 +75,51 @@
     text-align: left;
     flex-direction: column;
 }
+
+.hidden {
+    transform: translateX(100%); /* Hide the menu off the right side of the screen */
+    visibility: hidden; /* Hide the menu from screen readers */
+  }
+  
+.projects-menu {
+    position: fixed;
+    margin: 80px auto;    
+    right: 50px;
+    width: 50%;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 10;
+    overflow-y: auto;
+    box-shadow: -4px 0 8px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.project-item {
+    display: flex; /* Aligns image and description side by side */
+    align-items: center; /* Centers them vertically */
+    margin-bottom: 20px; /* Adds space between project items */
+  }
+  
+  .project-image {
+    margin: 20px;
+    max-width: 50%; /* Ensure images do not overflow their containers */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without stretching */
+  }
+  
+  
+  .project-description {
+    flex: 1; /* Allows the description to fill the remaining horizontal space */
+  }
+  
+
+
+
+
+
+
+
+
