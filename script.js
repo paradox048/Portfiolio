@@ -49,17 +49,67 @@ gsap.to(".circles", 1.5, {
   delay: 3,
 })
 
-gsap.to(".block", 1.5, {
-  rotation: 360,
+gsap.to(".block", 0.75, {
+  display: "block",
+  height: "200px",
   ease: "power4.inOut",
-  delay: 3,
+  delay: 4,
 })
 
-gsap.to(".block", 1.5, {
-  rotation: 360,
+gsap.to(".block", 0.75, {
+  width: "800px",
   ease: "power4.inOut",
-  delay: 3,
+  delay: 4.5,
 })
+
+gsap.fromTo(".menu-container", {
+  duration: 2,
+  left: "100%",
+  scale: 0.5, 
+  ease: "power4.inOut",
+  delay: 4,
+},
+{
+  duration: 2,
+  left: "50%",
+  scale: 0.5,
+  transform: "translateX(-50%)",
+  ease: "power4.inOut",
+  delay: 4,
+});
+
+gsap.to(".block", 1.5, {
+  width: "0px",
+  ease: "power4.inOut",
+  delay: 5,
+});
+
+gsap.to(".block", 1.5, {
+  height: "0px",
+  ease: "power4.inOut",
+  delay: 6,
+});
+
+
+gsap.to (".circles", 1.5, {
+  rotation: 0,
+  ease: "power4.inOut",
+  delay: 6.5,
+})
+
+gsap.to(".loader", 2.5, {
+  scale: 0,
+  ease: "power4.inOut",
+  delay: 7,
+});
+
+gsap.to(".menu-container", 2, {
+  scale: 1,
+  ease: "power4.inOut",
+  delay: 7.5,
+});
+
+
 
 // // Print test
 // console.log("Hello World");
