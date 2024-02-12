@@ -156,6 +156,11 @@ html, body {
 
 .menu-buttons {
     gap: 2em;
+    /* Place them on the top right */
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2em;
 }
 
 button {
