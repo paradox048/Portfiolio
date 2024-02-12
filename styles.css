@@ -1,5 +1,5 @@
 * {
-    background-color: rgb(232,232,232);
+    background-color: white;
     font-family: 'Courier New', monospace;
     box-sizing: border-box;
 }
@@ -9,120 +9,56 @@
 }
 
 .menu-container {
-    position: fixed;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh; /* 100% of the viewport height */
-    width: 100vw; /* 100% of the viewport width */
+    display: flexbox;
 }
 
 .menu-box {
-    margin: 50px; /* 50px margin on all sides */
-    padding: 50px;
-    border-radius: 10px;
-    outline: 1px solid #000;
-    height: calc(100vh - 100px); /* Subtracting the margin from the viewport height */
-    width: calc(100vw - 100px); /* Subtracting the margin from the viewport width */
-    box-sizing: border-box;
+    display: flexbox;
+    flex-direction: column;
+    justify-content: space-between; /* Aligns children to the left and right */
+    flex-wrap: wrap; /* Allows children to wrap to the next line */
+    /* center text */
+    text-align: center;
 }
 
-.menu-box .name, .menu-box .subtitle {
-    margin: 0px; /* Reset margin to ensure consistent alignment */
+.menu-box-heading {
+    padding: 100px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu-item {
+    margin-left: 20px; /* Adds space between menu items */
 }
 
 .menu-box .name {
-    font-size: 50px;
+    font-size: 100px;
     font-weight: 200;
     position: relative;
     right: 3px; /* Make it align with the subtitle */
+    margin-bottom: 10px;
 }
  
 .menu-box .subtitle {
-    bottom: -10px;
-    margin-bottom: 40px;
+    margin: 2px;
+    font-size: x-large;
 }
 
 #dot {
     font-size: 10px;
 }
 
-.menu-box .menu-items div {
-    margin: 20px auto;
-    font-weight: bold;
-}
-
-.menu-item-projects {
+.menu-item-projects, .menu-item-info, .menu-item-contact {
     cursor: pointer;
 }
 
-.menu-container .menu-container-intro {
-    text-align: left;
-    /* Move the text all the way to the right in a small rectangle */
-    position: absolute;
-    margin: 80px;
-    bottom: 145px;
-    right: 30%;
-    width: 25%;
-    height: 45%;
-    /*  make the text justified */
-    text-align: left;
-    flex-direction: column;
-    font-size: x-large;
 
-}
 
-.hidden {
-    transform: translateX(100%); /* Hide the menu off the right side of the screen */
-    visibility: hidden; /* Hide the menu from screen readers */
-}
-
-.divider-container {
-    display: inline-block;
-
-}
-.projects-menu {
-    position: fixed;
-    margin: 80px auto;    
-    right: 50px;
-    width: 50%;
-    height: 650px;
-    background-color: rgba(255, 255, 255, 0.95);
-    z-index: 10;
-    overflow-y: auto;
-    box-shadow: -4px 0 8px rgba(0,0,0,0.1);
-    transform: translateX(100%);
-    transition: transform 0.2s ease-in-out;
-    overflow-x: hidden; /* Hide horizontal overflow */
-    overflow-y: auto; /* Allow vertical scrolling */
-}
-
-.project-item {
-    display: flex; /* Aligns image and description side by side */
-    align-items: center; /* Centers them vertically */
-    margin-bottom: 20px; /* Adds space between project items */
-  }
-  
-  .project-image {
-    margin: 20px;
-    max-width: 50%; /* Ensure images do not overflow their containers */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area without stretching */
-  }
-  
-  
-  .project-description {
-    flex: 1; /* Allows the description to fill the remaining horizontal space */
-  }
-  
-  #whirlpool {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: radial-gradient(circle, transparent 30%, blue 70%);
-    position: relative;
-    margin: 20px auto;
-}
 
 
 
