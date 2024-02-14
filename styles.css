@@ -1,16 +1,33 @@
 * {
     /* background-color: rgb(244, 244, 244); */
-    font-family: 'Courier New', monospace;
+    font-family: 'Roboto Slab', monospace;
     box-sizing: border-box;
 }
 
 html, body {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
-    background: grey;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 0;  
+}
+
+::-webkit-scrollbar-thumb {
+    background: #af1313;
+}
+
+
+/* Site container */
+ .site-container {
+    display: flex;
+    position: relative;
+    /* position: sticky; */
+ }
+
+/* LOADER SECTION*/
 .loader {
     position: fixed; /* Stay in place */
     top: 0; /* Stay at the top */
@@ -18,7 +35,9 @@ html, body {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background: black;
+    pointer-events: none; /* This makes the element not intercept any mouse events */
 }
+
 
 .counter {
     width: 100%;
@@ -98,55 +117,71 @@ html, body {
     height: 0px; 
     display: none;
     background: none;
-    border: 1px solid white;
+    border: 1px  solid white;
     transform-origin: bottom; /* Rotate from the bottom */
 }
+/* END OF LOADER SECTION */
+
+/* NAVIGATION SECTION */
 
 .menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 100%;
     background: white;
+    display: flex;  
+    left: 0;
+    z-index: 2;
 }
 
 .menu-box {
-    display: flexbox;
+    position: fixed;
     flex-direction: column;
-    justify-content: space-between; /* Aligns children to the left and right */
-    flex-wrap: wrap; /* Allows children to wrap to the next line */
     /* center text */
-    text-align: center;
+    text-align: left;
+    /* Debugging */
+    /* border: 1px solid black; */
+    width: 805px;
+    /* margin-right: 2px; */
 }
 
 .menu-box-heading {
-    padding: 100px;
+    margin: 90px;
+    /* border: 1px solid black; */
 }
 
 .menu-box .name {
-    font-size: 100px;
-    font-weight: 200;
-    position: relative;
+    font-size: 75px;
+    font-weight: bold;
     right: 3px; /* Make it align with the subtitle */
     margin-bottom: 10px;
+    /* border: 1px solid black; */    
 }
- 
+
+
 .menu-box .subtitle {
     margin: 2px;
-    font-size: x-large;
+    font-weight: 800;
+    font-size: large;
+}
+
+.menu-box .subtitle-blurb {
+    color: grey;
+    font-size: 20px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 2px;
+    /* border: 1px solid black; */
 }
 
 .menu-buttons {
-    gap: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1em;
     /* Place them on the top right */
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 2em;
+    position: relative;
+    /* border: 1px solid black; */
+    margin-left: 90px;
 }
 
 button {
@@ -163,6 +198,7 @@ button {
     transition: all 0.3s;
     z-index: 100;
     margin: 0.5em;
+    width: 150px;
 }
 
 button span {
@@ -187,6 +223,31 @@ button:hover {
 
 button:hover:after {
     width: 100%;
+}
+
+/* END OF NAVIGATION SECTION */
+
+/* START OF MAIN INFO */
+.main-content {
+    width: calc(100vw - 300px); /* Adjust based on your sidebar's width */
+    overflow-y: auto;
+    padding: 2em auto;
+    margin-top: 100px;
+    padding-right: 100px;
+    z-index: 2;
+}
+
+.info-container {
+    align-items: left;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* margin: 40px auto; */
+    /* border: 1px solid black; */
+    overflow: wrap;
+    width: 100%;
+    
 }
 
 
