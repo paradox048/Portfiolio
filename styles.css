@@ -12,6 +12,8 @@ html, body {
     height: auto;
     overflow: scroll;
     overflow-x: hidden;
+    /* smooth scrolling */
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -189,6 +191,7 @@ html, body {
 .info-container-intro {
     font-size: 20px;
     color: grey;
+    padding-bottom: 100px;
 }
 
 .info-container-intro span {
@@ -237,6 +240,10 @@ button:hover:after {
     width: 100%;
 }
 
+.button-active {
+    background: rgb(0, 0, 0);
+    color: white;
+}
 /* END OF NAVIGATION SECTION */
 
 /* START OF MAIN INFO */
@@ -259,10 +266,13 @@ button:hover:after {
     /* border: 1px solid black; */
     overflow: wrap;
     width: 100%;
-    
+    /* border: 1px solid black; */
+    height: auto;
 }
 
-
+.contacts-container {
+    height: 100%;
+}
 
 
 
