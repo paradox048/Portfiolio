@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@300&display=swap');
+
 * {
     /* background-color: rgb(244, 244, 244); */
-    font-family: 'Roboto Slab', monospace;
+    font-family: 'Inter', sans-serif;
     box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
 }
 
 html, body {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -127,10 +130,8 @@ html, body {
 .menu-container {
     width: 100%;
     height: 100%;
-    background: white;
     display: flex;  
     left: 0;
-    z-index: 2;
 }
 
 .menu-box {
@@ -145,7 +146,7 @@ html, body {
 }
 
 .menu-box-heading {
-    margin: 90px;
+    margin: 75px;
     /* border: 1px solid black; */
 }
 
@@ -165,11 +166,12 @@ html, body {
 }
 
 .menu-box .subtitle-blurb {
-    color: grey;
+    color: rgb(103, 103, 103);
     font-size: 20px;
     margin: 10px;
     margin-top: 20px;
     margin-left: 2px;
+    width: 400px;
     /* border: 1px solid black; */
 }
 
@@ -181,7 +183,7 @@ html, body {
     /* Place them on the top right */
     position: relative;
     /* border: 1px solid black; */
-    margin-left: 90px;
+    margin-left: 70px;
 }
 
 button {

@@ -103,25 +103,24 @@ gsap.to(".loader", 2.5, {
   delay: 7,
 });
 
+// Example of setting display to none after animation
+gsap.to(".loader", 2.5, {
+  autoAlpha: 0, // Fades out the loader
+  onComplete: function() {
+    document.querySelector(".loader").style.display = 'none';
+  },
+  ease: "power4.out",
+  delay: 7,
+});
+
+
 gsap.to(".site-container", 2, {
   scale: 1,
   ease: "power4.inOut",
   delay: 7.5,
 });
 
-// Assuming this is the last animation on the preloader
-gsap.to(".loader", 2.5, {
-  scale: 0,
-  ease: "power4.inOut",
-  delay: 7.5,
-  onComplete: () => {
-    // Hide the preloader
-    document.querySelector(".loader").style.display = 'none';
-    // Or remove the preloader from the DOM
-    // document.querySelector(".loader").remove();
-  }
-});
 
 
-// // Print test
-// console.log("Hello World");
+
+
