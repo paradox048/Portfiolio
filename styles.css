@@ -186,6 +186,16 @@ html, body {
     margin-left: 70px;
 }
 
+.info-container-intro {
+    font-size: 20px;
+    color: grey;
+}
+
+.info-container-intro span {
+    font-weight: bold;
+    color: black;
+}
+
 button {
     position: relative;
     background: none;
