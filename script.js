@@ -162,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Check on scroll
   window.addEventListener('scroll', checkSectionInView);
-
 });
 
 
