@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@300&display=swap');
 
+:root {
+    --image-outline: rgb(162, 157, 157);
+    --blue-fill: rgb(36, 94, 152);
+}
 * {
     /* background-color: rgb(244, 244, 244); */
     font-family: 'Inter', sans-serif;
@@ -284,6 +288,8 @@ button:hover:after {
     display: flex;
     align-items: center;
     border: 1px solid black;
+    height: 300px;
+    align-items: flex-start;
 }
 
 .project-box-images {
@@ -313,10 +319,12 @@ button:hover:after {
 .tech-tags {
     font-weight: bold;
     color: whitesmoke;
-    background-color: black;
-    border: 1px solid black;
+    background-color: var(--blue-fill);
+    border: 1px solid var(--image-outline);
     border-radius: 5px;
     padding: 5px;
     margin-top: 20px;
     margin-right: 10px; /* Added space between tech tags */
 }
+
+
