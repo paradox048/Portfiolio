@@ -1,26 +1,26 @@
-//import GSAP
-// Adding the load screen animation
-function startLoader() {
-  let counterElement = document.querySelector(".counter");
-  let currentValue = 0;
+// //import GSAP
+// // Adding the load screen animation
+// function startLoader() {
+//   let counterElement = document.querySelector(".counter");
+//   let currentValue = 0;
 
-  function updateCounter() {
-    if (currentValue === 100) {
-      return;
-    }
+//   function updateCounter() {
+//     if (currentValue === 100) {
+//       return;
+//     }
 
-    currentValue += Math.floor(Math.random() * 10) + 1;
-    if (currentValue > 100) {
-      currentValue = 100;
-    }
+//     currentValue += Math.floor(Math.random() * 10) + 1;
+//     if (currentValue > 100) {
+//       currentValue = 100;
+//     }
 
-    counterElement.textContent = currentValue + "%";
-    let delay = Math.floor(Math.random() * 200) + 250;
-    setTimeout(updateCounter, delay);
-  }
-  updateCounter();
-}
-// Call the startLoader function when the DOM is ready
+//     counterElement.textContent = currentValue + "%";
+//     let delay = Math.floor(Math.random() * 200) + 250;
+//     setTimeout(updateCounter, delay);
+//   }
+//   updateCounter();
+// }
+// // Call the startLoader function when the DOM is ready
 // startLoader();
 
 // gsap.from(".circles", 2, {
@@ -97,28 +97,12 @@ function startLoader() {
 //   delay: 6.5,
 // })
 
-// gsap.to(".loader", 2.5, {
-//   scale: 0,
-//   ease: "power4.inOut",
-//   delay: 7,
-// });
-
-// // Example of setting display to none after animation
-// gsap.to(".loader", 2.5, {
-//   autoAlpha: 0, // Fades out the loader
-//   onComplete: function() {
-//     document.querySelector(".loader").style.display = 'none';
-//   },
-//   ease: "power4.out",
-//   delay: 7,
-// });
-
-
 // gsap.to(".site-container", 2, {
-//   scale: 1,
+//     scale: 1,
 //   ease: "power4.inOut",
-//   delay: 7.5,
+//   delay: 7,
 // });
+
 
 // when the button is clicked navigate to one part of the page
 const aboutBtn = document.querySelector("#menu-button-info");

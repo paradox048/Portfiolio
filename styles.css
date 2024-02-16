@@ -29,6 +29,7 @@ html, body {
     display: flex;
     position: relative;
     /* position: sticky; */
+    height: 100%;
  }
 
 /* LOADER SECTION*/
@@ -39,7 +40,7 @@ html, body {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background: black;
-    pointer-events: none; /* This makes the element not intercept any mouse events */
+
 }
 
 
@@ -284,10 +285,9 @@ button:hover:after {
     padding-left: 30px;
 }
 
-.projects-box_project-1 {
+.projects-box {
     display: flex;
     align-items: center;
-    border: 1px solid black;
     height: 300px;
     align-items: flex-start;
 }
@@ -302,21 +302,22 @@ button:hover:after {
 
 .project-box-header {
     padding-top: 0px;
-    border: 1px solid black;
     margin-bottom: 20px;
-
 }
 
 .project-box-descr {
-    margin-top: 0px;
+    margin-top: 0px auto;
     /* border: 1px solid black; */
 }
 
 .tech-tags-container {
     margin-top: 20px;
+    height: 100px;
 }
 
 .tech-tags {
+    display: flex-box;
+    width: 100px;
     font-weight: bold;
     color: whitesmoke;
     background-color: var(--blue-fill);
