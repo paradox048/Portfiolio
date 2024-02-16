@@ -322,12 +322,13 @@ button:hover:after {
 }
 
 .tech-tags-container {
-    margin-top: 20px;
     height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .tech-tags {
-    display: flex-box;
     width: 100px;
     font-weight: bold;
     color: whitesmoke;
@@ -335,7 +336,7 @@ button:hover:after {
     border: 1px solid var(--image-outline);
     border-radius: 5px;
     padding: 5px;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-right: 10px;
     /* Added space between tech tags */
 }
