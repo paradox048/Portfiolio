@@ -27,7 +27,7 @@ body {
 /* Site container */
 .site-container {
     display: flex;
-    align-items: column;
+    flex-direction: row;
     position: relative;
     /* position: sticky; */
     height: 100%;
@@ -261,12 +261,12 @@ button:hover:after {
 .main-content {
     width: calc(100vw - 300px);
     /* Adjust based on your sidebar's width */
-
     padding: 2em auto;
     margin-top: 100px;
     padding-right: 100px;
     z-index: 2;
     overflow: hidden;
+
 }
 
 .info-container {
@@ -339,4 +339,7 @@ button:hover:after {
     margin-top: 0px;
     margin-right: 10px;
     /* Added space between tech tags */
+}
+.contacts-container{
+    border: 1px solid black;
 }
