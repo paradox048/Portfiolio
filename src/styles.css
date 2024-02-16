@@ -296,6 +296,10 @@ button:hover:after {
     padding-left: 30px;
 }
 
+.projects-container {
+    padding-top: 100px;
+}
+
 .projects-box {
     display: flex;
     align-items: center;
@@ -329,7 +333,6 @@ button:hover:after {
 }
 
 .tech-tags {
-    width: 100px;
     font-weight: bold;
     color: whitesmoke;
     background-color: var(--blue-fill);
@@ -339,7 +342,4 @@ button:hover:after {
     margin-top: 0px;
     margin-right: 10px;
     /* Added space between tech tags */
-}
-.contacts-container{
-    border: 1px solid black;
 }

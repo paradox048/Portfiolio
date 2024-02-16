@@ -137,7 +137,15 @@ document.addEventListener('DOMContentLoaded', function() {
         button.classList.add('button-active');
       } else {
         button.classList.remove('button-active');
+      } 
+
+      // Check if the section is at the top of the page
+      if (scrollPosition === 0 || scrollPosition < sectionTop + document.getElementById('about').offsetHeight) {
+        document.getElementById('menu-button-info').classList.add('button-active');
+      } else {
+        document.getElementById('menu-button-info').classList.remove('button-active');
       }
+
     });
   }
 
