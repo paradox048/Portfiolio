@@ -1,18 +1,19 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@300&display=swap");
 
 :root {
     --image-outline: rgb(162, 157, 157);
     --blue-fill: rgb(36, 94, 152);
 }
+
 * {
     /* background-color: rgb(244, 244, 244); */
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     box-sizing: border-box;
     background-color: rgb(255, 255, 255);
 }
 
-html, body {
+html,
+body {
     width: 100vw;
     height: auto;
     /* smooth scrolling */
@@ -23,34 +24,40 @@ html, body {
     width: 2px;
 }
 
-
 /* Site container */
- .site-container {
+.site-container {
     display: flex;
+    align-items: column;
     position: relative;
     /* position: sticky; */
     height: 100%;
- }
+}
 
 /* LOADER SECTION*/
 .loader {
-    position: fixed; /* Stay in place */
-    top: 0; /* Stay at the top */
-    left: 0; /* Stay at the left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    position: fixed;
+    /* Stay in place */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    /* Stay at the left */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
     background: black;
-
 }
-
 
 .counter {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     position: fixed;
-    display: flex; /* Aligns children to the center */
-    justify-content: flex-end; /* Aligns children to the right */
-    align-items: flex-end; /* Aligns children to the bottom */
+    display: flex;
+    /* Aligns children to the center */
+    justify-content: flex-end;
+    /* Aligns children to the right */
+    align-items: flex-end;
+    /* Aligns children to the bottom */
     color: white;
     padding: 2rem 4rem;
     transform: translateY(-10%);
@@ -59,7 +66,6 @@ html, body {
     font-weight: lighter;
     font-style: italic;
     z-index: 1000;
-    
 }
 
 .site-teaser span {
@@ -106,7 +112,8 @@ html, body {
 .circle-inner-rotator {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%) scale(0); /* Hide the circle */
+    transform: translateX(-50%) scale(0);
+    /* Hide the circle */
     width: 162.5px;
     height: 162.5px;
     background: none;
@@ -119,12 +126,14 @@ html, body {
     top: -100px;
     left: 200px;
     width: 0px;
-    height: 0px; 
+    height: 0px;
     display: none;
     background: none;
-    border: 1px  solid white;
-    transform-origin: bottom; /* Rotate from the bottom */
+    border: 1px solid white;
+    transform-origin: bottom;
+    /* Rotate from the bottom */
 }
+
 /* END OF LOADER SECTION */
 
 /* NAVIGATION SECTION */
@@ -132,7 +141,7 @@ html, body {
 .menu-container {
     width: 100%;
     height: 100%;
-    display: flex;  
+    display: flex;
     left: 0;
 }
 
@@ -155,11 +164,11 @@ html, body {
 .menu-box .name {
     font-size: 75px;
     font-weight: bold;
-    right: 3px; /* Make it align with the subtitle */
+    right: 3px;
+    /* Make it align with the subtitle */
     margin-bottom: 10px;
-    /* border: 1px solid black; */    
+    /* border: 1px solid black; */
 }
-
 
 .menu-box .subtitle {
     margin: 2px;
@@ -209,7 +218,8 @@ button {
     color: black;
     padding: 0.25em 0.75em;
     cursor: pointer;
-    overflow: hidden; /* Hides the border */    
+    overflow: hidden;
+    /* Hides the border */
     transition: all 0.3s;
     z-index: 100;
     margin: 0.5em;
@@ -244,12 +254,14 @@ button:hover:after {
     background: rgb(0, 0, 0);
     color: white;
 }
+
 /* END OF NAVIGATION SECTION */
 
 /* START OF MAIN INFO */
 .main-content {
-    width: calc(100vw - 300px); /* Adjust based on your sidebar's width */
-    
+    width: calc(100vw - 300px);
+    /* Adjust based on your sidebar's width */
+
     padding: 2em auto;
     margin-top: 100px;
     padding-right: 100px;
@@ -274,7 +286,6 @@ button:hover:after {
 .contacts-container {
     height: 100vh;
 }
-
 
 .socials-container {
     font-size: 35px;
@@ -325,7 +336,6 @@ button:hover:after {
     border-radius: 5px;
     padding: 5px;
     margin-top: 20px;
-    margin-right: 10px; /* Added space between tech tags */
+    margin-right: 10px;
+    /* Added space between tech tags */
 }
-
-
