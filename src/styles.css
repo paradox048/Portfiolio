@@ -3,13 +3,14 @@
 :root {
     --image-outline: rgb(162, 157, 157);
     --blue-fill: rgb(36, 94, 152);
+    --intro-text: rgb(36, 35, 35);
 }
 
 * {
     /* background-color: rgb(244, 244, 244); */
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(237, 237, 237);
 }
 
 html,
@@ -177,7 +178,7 @@ body {
 }
 
 .menu-box .subtitle-blurb {
-    color: rgb(103, 103, 103);
+    color: var(--intro-text);
     font-size: 20px;
     margin: 10px;
     margin-top: 20px;
@@ -199,7 +200,7 @@ body {
 
 .info-container-intro {
     font-size: 20px;
-    color: grey;
+    color: var(--intro-text);
     padding-bottom: 100px;
 }
 
@@ -263,10 +264,10 @@ button:hover:after {
     /* Adjust based on your sidebar's width */
     padding: 2em auto;
     margin-top: 100px;
-    padding-right: 100px;
+    margin-right: 75px;
+    padding-left: 0px;
     z-index: 2;
     overflow: hidden;
-
 }
 
 .info-container {
@@ -281,10 +282,6 @@ button:hover:after {
     width: 100%;
     /* border: 1px solid black; */
     height: auto;
-}
-
-.contacts-container {
-    height: 100vh;
 }
 
 .socials-container {
@@ -307,12 +304,19 @@ button:hover:after {
     align-items: flex-start;
 }
 
+.projects-box:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    border-radius: 10px;
+}
+
 .project-box-images {
     width: 150px;
     height: 100px;
     margin-right: 20px;
     margin-top: 20px;
-    border: 2px solid rgb(162, 157, 157);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
 }
 
 .project-box-header {
@@ -342,4 +346,8 @@ button:hover:after {
     margin-top: 0px;
     margin-right: 10px;
     /* Added space between tech tags */
+}
+
+.contacts-container {
+    height: 100vh;
 }
