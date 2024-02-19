@@ -7,10 +7,23 @@
 }
 
 /* Removing the default link styling and keeping the colour blue */
-a:visited { text-decoration: none; color:var(--blue-fill); }
-a:hover { text-decoration: none; color:var(--blue-fill); }
-a:focus { text-decoration: none; color:var(--blue-fill); }
-a:hover, a:active { text-decoration: none; color:var(--blue-fill) }
+a:visited {
+    text-decoration: none;
+    color: var(--blue-fill);
+}
+a:hover {
+    text-decoration: none;
+    color: var(--blue-fill);
+}
+a:focus {
+    text-decoration: none;
+    color: var(--blue-fill);
+}
+a:hover,
+a:active {
+    text-decoration: none;
+    color: var(--blue-fill);
+}
 
 * {
     /* background-color: rgb(244, 244, 244); */
@@ -367,16 +380,14 @@ button:hover:after {
 
 .more-projects-container:hover div,
 .more-projects-container:hover i {
-    color: var(--blue-fill)
+    color: var(--blue-fill);
+    /* color: red; */
 }
 
-.more-projects-container:hover i{
+.more-projects-container:hover i {
     /* underline the text */
     transform: translateY(-2px);
 }
-
-
-
 
 .contacts-container {
     height: 50vh;

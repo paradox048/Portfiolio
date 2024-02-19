@@ -1,10 +1,9 @@
 {
-  "name": "portfiolio",
+  "name": "src",
   "version": "1.0.0",
-  "description": "Portfolio Website",
-  "main": "script.js",
+  "description": "",
+  "main": "src/script.js",
   "scripts": {
-    "start": "live-server src --verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
