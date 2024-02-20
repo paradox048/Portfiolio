@@ -11,14 +11,17 @@ a:visited {
     text-decoration: none;
     color: var(--blue-fill);
 }
+
 a:hover {
     text-decoration: none;
     color: var(--blue-fill);
 }
+
 a:focus {
     text-decoration: none;
     color: var(--blue-fill);
 }
+
 a:hover,
 a:active {
     text-decoration: none;
@@ -317,7 +320,6 @@ button:hover:after {
 
 .projects-box {
     display: flex;
-    align-items: center;
     height: 300px;
     align-items: flex-start;
     padding: 30px;
@@ -375,13 +377,14 @@ button:hover:after {
 }
 
 .more-projects-text {
-    margin-right: 10px;
+    margin-right 10px;
 }
 
 .more-projects-container:hover div,
 .more-projects-container:hover i {
     color: var(--blue-fill);
-    /* color: red; */
+    text-decoration: underline;
+
 }
 
 .more-projects-container:hover i {
@@ -391,4 +394,36 @@ button:hover:after {
 
 .contacts-container {
     height: 50vh;
+}
+
+/* Start of of the experience section  */
+.experience-box-container {
+    display: flex;
+    height: 300px;
+    align-items: flex-start;
+    padding: 30px;
+    /* Make the divs inside the container side by side */
+    justify-content: space-between;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+.experience-box-container:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.experience-box-date {
+    margin-right: 20px;
+    border: 1px solid black;
+}
+
+.experience-box-tech-tags-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid black;
 }
