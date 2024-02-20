@@ -9,25 +9,10 @@
 </head>
 
 <body>
-    <!-- Start of the loader -->
-    <!-- <div class="loader">
-      <h1 class="counter">0</h1>
-
-      <div class="site-teaser">
-        <span>Open on Desktop for the smoothest experience</span>
-      </div>
-
-      <div class="circles">
-        <div class="circle circle-outer"></div>
-        <div class="circle circle-inner"></div>
-        <div class="circle-inner-rotator"></div>
-        <div class="block"></div>
-      </div>
-    </div> -->
     <!-- End of the loader -->
     <div class="site-container">
         <!-- Start of Menu Container -->
-        <div id="about" class="menu-container">
+        <div class="menu-container">
             <div class="menu-box">
                 <div class="menu-box-heading">
                     <h1 class="name">Derek Duong</h1>
@@ -38,9 +23,9 @@
                 </div>
 
                 <div class="menu-buttons">
-                    <button id="menu-button-info">.Info</button>
-                    <button id="menu-button-projects">.Projects</button>
-                    <button id="menu-button-contact">.Experience</button>
+                    <button id="menu-button-info">Info</button>
+                    <button id="menu-button-projects">Projects</button>
+                    <button id="menu-button-experience">Experience</button>
                 </div>
                 <div class="socials-container">
                     <a href="https://www.linkedin.com/in/derek-duong-a891391ab/" target="_blank" class="social-link">
@@ -59,7 +44,7 @@
 
         <div class="main-content">
             <!-- Start of Info Container -->
-            <div class="info-container">
+            <div id="info" class="info-container">
                 <div class="info-box">
                     <div class="info-container-intro">
                         I am currently a third year
@@ -79,13 +64,15 @@
                     </div>
                 </div>
             </div>
+
             <!-- End of Info Container -->
 
             <!-- Start of Projects Container -->
+            <!-- <h1> Projects</h1> -->
             <div id="projects" class="projects-container">
                 <!-- <div class="projects-box-heading">
-              <h1 class="name">#Projects</h1>
-            </div> -->
+            <h1 class="name">#Projects</h1>
+        </div> -->
                 <div class="projects-box">
                     <img class="project-box-images" src="../images/nn-MNIST.png" alt="test1" />
                     <div class="project-box-text">
@@ -183,7 +170,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="more-projects-container">
                     <a class="more-projects-link" href="projects.html" projects-page">
                         <div class="more-projects-text">See more Projects <i
@@ -197,11 +183,10 @@
             <div id="experience" class="experience-container">
                 <div class="experience-container">
                     <div class="experience-box-heading">
-                        <h1 class="name">#Experience</h1>
+                        <h1 class="experience-name">#Experience</h1>
                         <div class="experience-box-container">
-                            <div class="experience-box-date">2021 - Present</div>
+                            <div class="experience-box-date">2024 - PRESENT</div>
                             <header class="experience-box-text-containe">
-
                                 <h2 class="experience-box-header"> Student IT Technician (Co-op) </h2>
                                 <div class="experience-box-description project-box-text">
                                     Diagnosis and resolution of issues, problem
@@ -223,22 +208,32 @@
                             </header>
                         </div>
                     </div>
-                    <!-- end of the experience container -->
-                    <!-- Start of Contacts-container -->
-                    <div id="contact" class="contact-container">
-                        <div class="contact-box">
-                            <div class="contact-box-heading">
-                                <h1 class="name">#contact</h1>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
+            <!-- end of the experience container -->
+            <!-- start of the footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="#info">Home</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <p>Email: dduong03@uoguelph.ca</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!--end of main content -->
 
-            <!--end of main content -->
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-            <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

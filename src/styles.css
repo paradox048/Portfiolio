@@ -56,109 +56,6 @@ body {
     height: 100%;
 }
 
-/* LOADER SECTION*/
-.loader {
-    position: fixed;
-    /* Stay in place */
-    top: 0;
-    /* Stay at the top */
-    left: 0;
-    /* Stay at the left */
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    background: black;
-}
-
-.counter {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    /* Aligns children to the center */
-    justify-content: flex-end;
-    /* Aligns children to the right */
-    align-items: flex-end;
-    /* Aligns children to the bottom */
-    color: white;
-    padding: 2rem 4rem;
-    transform: translateY(-10%);
-    font-size: 10vw;
-    font-family: "saol Display";
-    font-weight: lighter;
-    font-style: italic;
-    z-index: 1000;
-}
-
-.site-teaser span {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 2rem 4rem;
-    color: white;
-    font-size: 1rem;
-    font-family: "saol Display";
-    font-weight: lighter;
-    font-style: italic;
-}
-
-.circles {
-    position: absolute;
-    left: 5rem;
-    bottom: 5rem;
-    width: 400px;
-    height: 400px;
-    border-radius: 100%;
-}
-
-.circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: none;
-    border: 1px solid white;
-    border-radius: 100%;
-}
-
-.circle-inner {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-}
-
-.circle-inner-rotator {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) scale(0);
-    /* Hide the circle */
-    width: 162.5px;
-    height: 162.5px;
-    background: none;
-    border: 1px solid white;
-    border-radius: 100%;
-}
-
-.block {
-    position: absolute;
-    top: -100px;
-    left: 200px;
-    width: 0px;
-    height: 0px;
-    display: none;
-    background: none;
-    border: 1px solid white;
-    transform-origin: bottom;
-    /* Rotate from the bottom */
-}
-
-/* END OF LOADER SECTION */
-
 /* NAVIGATION SECTION */
 
 .menu-container {
@@ -185,7 +82,7 @@ body {
 }
 
 .menu-box .name {
-    font-size: 75px;
+    font-size: 60px;
     font-weight: bold;
     right: 3px;
     /* Make it align with the subtitle */
@@ -196,7 +93,7 @@ body {
 .menu-box .subtitle {
     margin: 2px;
     font-weight: 800;
-    font-size: large;
+    font-size: medium;
 }
 
 .menu-box .subtitle-blurb {
@@ -224,6 +121,7 @@ body {
     font-size: 20px;
     color: var(--intro-text);
     padding-bottom: 100px;
+    margin-right: 50px;
 }
 
 .info-container-intro span {
@@ -286,23 +184,22 @@ button:hover:after {
     /* Adjust based on your sidebar's width */
     padding: 2em auto;
     margin-top: 100px;
-    margin-right: 75px;
+    margin-right: 45px;
     padding-left: 0px;
     z-index: 2;
+    /* border: 1px solid black; */
 }
 
 .info-container {
     align-items: left;
-    width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    /* margin: 40px auto; */
-    /* border: 1px solid black; */
     overflow: wrap;
     width: 100%;
     /* border: 1px solid black; */
     height: auto;
+    margin-bottom: 100px;
 }
 
 .socials-container {
@@ -315,7 +212,6 @@ button:hover:after {
 }
 
 .projects-container {
-    padding-top: 100px;
 }
 
 .projects-box {
@@ -373,18 +269,17 @@ button:hover:after {
 .more-projects-link {
     margin-top: 50px;
     text-decoration: none;
-    display: flex;
 }
 
 .more-projects-text {
-    margin-right 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
 }
 
 .more-projects-container:hover div,
 .more-projects-container:hover i {
     color: var(--blue-fill);
     text-decoration: underline;
-
 }
 
 .more-projects-container:hover i {
@@ -404,8 +299,8 @@ button:hover:after {
     padding: 30px;
     /* Make the divs inside the container side by side */
     justify-content: space-between;
-    padding: 30px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    margin-top: 100px;
 }
 
 .experience-box-container:hover {
@@ -416,8 +311,11 @@ button:hover:after {
 }
 
 .experience-box-date {
+    margin: 0px;
     margin-right: 20px;
-    border: 1px solid black;
+    width: 600px;
+    /* border: 1px solid black; */
+    padding-top: 4px;
 }
 
 .experience-box-tech-tags-container {
@@ -425,5 +323,23 @@ button:hover:after {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+.experience-box-header {
+    align-item: flex-start;
+    padding-bottom: 20px;
+    /* border: 1px solid black; */
+    margin: 0;
+}
+
+.experience-name {
+    /* hidden display */
+    display: none;
+}
+
+.footer-content {
+    display: flex;
+    margin-top: 100px;
+    border-top: 1px solid var(--image-outline);
 }
