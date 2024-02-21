@@ -207,11 +207,14 @@ button:hover:after {
     margin: 80px;
 }
 
-#github {
-    padding-left: 30px;
+/* removes the underline wrap around the icons */
+.socials-container a {
+    text-decoration: none;
 }
 
-.projects-container {
+#github,
+#resume {
+    padding-left: 30px;
 }
 
 .projects-box {
@@ -347,4 +350,9 @@ button:hover:after {
     display: flex;
     margin-top: 100px;
     border-top: 1px solid var(--image-outline);
+}
+
+.resume-container,
+.more-projects-container {
+    margin-top: 50px;
 }
