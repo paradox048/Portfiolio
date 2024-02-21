@@ -61,26 +61,31 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkSectionInView);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger);
+// make it so that this scroll trigger does not activate if on a mobile device
 
-  const sections = document.querySelectorAll(
-    ".info-container, .projects-container, .experience-container, .footer-container",
-  );
+if (window.innerWidth > 1200) {
+  document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
 
-  sections.forEach((section) => {
-    gsap.from(section, {
-      duration: 1, // Duration of the animation
-      opacity: 0, // Start with an opacity of 0
-      y: 50, // Start 50 pixels down from its original position
-      ease: "easeInOut", // Use an easing function for a smooth effect
-      scrollTrigger: {
-        trigger: section,
-        start: "top 75%", // Start the animation when the top of the section hits 75% of the viewport height
-        end: "bottom 25%", // Animation end trigger
-        // This means the animation will play on enter, reverse on leave, play in reverse on enter back, and reverse again on leave back
-        toggleActions: "play reverse play reverse",
-      },
+    const sections = document.querySelectorAll(
+      ".info-container, .projects-container, .experience-container, .footer-container",
+    );
+
+    sections.forEach((section) => {
+      gsap.from(section, {
+        duration: 1, // Duration of the animation
+        opacity: 0, // Start with an opacity of 0
+        y: 50, // Start 50 pixels down from its original position
+        ease: "easeInOut", // Use an easing function for a smooth effect
+        scrollTrigger: {
+          trigger: section,
+          start: "top 75%", // Start the animation when the top of the section hits 75% of the viewport height
+          end: "bottom 25%", // Animation end trigger
+          // This means the animation will play on enter, reverse on leave, play in reverse on enter back, and reverse again on leave back
+          toggleActions: "play reverse play reverse",
+        },
+      });
     });
   });
-});
+}
+// Do

@@ -266,9 +266,15 @@ button:hover:after {
     margin-right: 10px;
 }
 
+.projects-container a {
+    text-decoration: none;
+    color: black;
+}
+
 .more-projects-link {
     margin-top: 50px;
     text-decoration: none;
+    color: var(--blue-fill) !important;
 }
 
 .more-projects-text {
@@ -278,7 +284,6 @@ button:hover:after {
 
 .more-projects-container:hover div,
 .more-projects-container:hover i {
-    color: var(--blue-fill);
     text-decoration: underline;
 }
 
