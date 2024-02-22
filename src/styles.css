@@ -4,6 +4,29 @@
     --image-outline: rgb(162, 157, 157);
     --blue-fill: rgb(36, 94, 152);
     --intro-text: rgb(36, 35, 35);
+    --primary-text-colour: black;
+    --primary-background: rgb(237, 237, 237);
+}
+
+[data-theme="dark"] {
+    --image-outline: rgb(162, 157, 157);
+    --blue-fill: rgb(61, 65, 75);
+    --intro-text: rgb(237, 237, 237);
+    --primary-text-colour: white;
+    --primary-background: black;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    color: var(--primary-text-colour);
+    background-color: var(--primary-background);
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+    /* Smooth transition */
 }
 
 /* Removing the default link styling and keeping the colour blue */
@@ -26,21 +49,6 @@ a:hover,
 a:active {
     text-decoration: none;
     color: var(--blue-fill);
-}
-
-* {
-    /* background-color: rgb(244, 244, 244); */
-    font-family: "Inter", sans-serif;
-    box-sizing: border-box;
-    background-color: rgb(237, 237, 237);
-}
-
-html,
-body {
-    width: 100vw;
-    height: auto;
-    /* smooth scrolling */
-    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -126,17 +134,17 @@ body {
 
 .info-container-intro span {
     font-weight: bold;
-    color: black;
+    color: var(--intro-text);
 }
 
 button {
     position: relative;
     background: none;
     outline: none;
-    border: 1px solid black;
+    border: 1px solid var(--primary-text-colour);
     border-radius: 0.25em;
     font-size: 17px;
-    color: black;
+    color: var(--primary-text-colour);
     padding: 0.25em 0.75em;
     cursor: pointer;
     overflow: hidden;
@@ -158,13 +166,13 @@ button:after {
     left: 0;
     width: 0%;
     height: 100%;
-    background: rgb(0, 0, 0);
+    background: var(--primary-text-colour);
     z-index: -1;
     transition: all 0.3s;
 }
 
 button:hover {
-    color: white;
+    color: var(--primary-background);
 }
 
 button:hover:after {
@@ -172,8 +180,8 @@ button:hover:after {
 }
 
 .button-active {
-    background: rgb(0, 0, 0);
-    color: white;
+    background: var(--primary-text-colour);
+    color: var(--primary-background);
 }
 
 /* END OF NAVIGATION SECTION */
@@ -210,6 +218,7 @@ button:hover:after {
 /* removes the underline wrap around the icons */
 .socials-container a {
     text-decoration: none;
+    color: var(--primary-text-colour);
 }
 
 #github,
@@ -254,8 +263,10 @@ button:hover:after {
 .tech-tags-container {
     height: 100px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
+    /* border: 1px solid black; */
+    margin-top: 20px;
 }
 
 .tech-tags {
@@ -274,29 +285,34 @@ button:hover:after {
     color: black;
 }
 
-.more-projects-link {
+.more-container {
     margin-top: 50px;
-    text-decoration: none;
-    color: var(--blue-fill) !important;
+    width: 200px;
 }
 
-.more-projects-text {
+.more-link {
+    text-decoration: none;
+    color: var(--primary-text-colour);
+}
+
+.more-link:hover {
+    color: var(--blue-fill);
+}
+
+.more-text {
     margin-left: 30px;
     margin-bottom: 10px;
+    /* border: 1px solid black; */
 }
 
-.more-projects-container:hover div,
-.more-projects-container:hover i {
+.more-container:hover div,
+.more-container:hover i {
     text-decoration: underline;
 }
 
-.more-projects-container:hover i {
+.more-container:hover i {
     /* underline the text */
     transform: translateY(-2px);
-}
-
-.contacts-container {
-    height: 50vh;
 }
 
 /* Start of of the experience section  */
@@ -351,31 +367,48 @@ button:hover:after {
     align-items: flex-start;
 }
 
-.resume-container,
-.more-projects-container {
-    margin-top: 50px;
+footer {
+    margin-top: 100px;
 }
 
 .footer-section {
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
-    padding: 20px;
-    /* border: 1px solid black; */
+    margin-top: 20px;
+    margin-left: 30px;
 }
 
-.footer-email-section i {
+.email-container {
+    margin-top: 20px;
     text-decoration: none;
     color: black;
 }
 
-.footer-email-section {
-    color: black;
-    width: 50%;
-    justify-content: space-between;
-    border: 1px solid black;
+.system-theme-light-dark {
+    cursor: pointer;
+}
+
+.system-theme-light-dark:hover {
+    text-decoration: underline;
 }
 
 .footer-blurb {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    width: 50%;
+    justify-content: left;
+}
+
+.email-container a {
+    text-decoration: none;
+    color: var(--primary-text-colour);
+}
+
+.email-container a:hover span {
+    text-decoration: underline;
+}
+
+.system-theme-light-dark {
+    text-decoration: none;
+    color: var(--primary-text-colour);
 }

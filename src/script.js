@@ -88,4 +88,25 @@ if (window.innerWidth > 1200) {
     });
   });
 }
-// Do
+
+// Toggle the dark and light mode themes
+document.addEventListener("DOMContentLoaded", function () {
+  const themeToggler = document.getElementById("theme-toggler");
+  // make it so that on click we grab the data theme attribute and toggle it to either dark or light
+  themeToggler.addEventListener("click", function () {
+    // get the attribute of the data theme and switch it depeneding on what it is
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    let targetTheme = "dark";
+
+    if (currentTheme == "dark") {
+      targetTheme = "light";
+    }
+
+    document.documentElement.setAttribute("data-theme", targetTheme);
+    themeToggler.textContent =
+      targetTheme === "dark" ? "Light Mode" : "Dark Mode";
+
+    const themeToggleIcon = document.getElementById("theme-toggler-icon");
+    themeToggleIcon.classList.toggle("fa-sun");
+  });
+});
