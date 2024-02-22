@@ -347,12 +347,35 @@ button:hover:after {
 }
 
 .footer-content {
-    display: flex;
-    margin-top: 100px;
     border-top: 1px solid var(--image-outline);
+    align-items: flex-start;
 }
 
 .resume-container,
 .more-projects-container {
     margin-top: 50px;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 20px;
+    /* border: 1px solid black; */
+}
+
+.footer-email-section i {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-email-section {
+    color: black;
+    width: 50%;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.footer-blurb {
+    border: 1px solid black;
 }
