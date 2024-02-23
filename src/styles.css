@@ -6,6 +6,7 @@
     --intro-text: rgb(36, 35, 35);
     --primary-text-colour: black;
     --primary-background: rgb(237, 237, 237);
+    --table-line-theme: #ddd;
 }
 
 [data-theme="dark"] {
@@ -380,6 +381,7 @@ footer {
     /* align-items: center; */
     margin-top: 20px;
     margin-left: 30px;
+    dd
 }
 
 .email-container {
@@ -424,9 +426,88 @@ footer {
 }
 
 .projects-page-introduction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 50%;
     margin: 100px;
+}
+
+.projects-page-subheading {
+    text-align: left;
+}
+
+.projects-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.projects-page-table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 50%;
+    /* Adjust based on your preference */
+    border: 1px solid var(--table-line-theme);
+    /* Light grey border */
+}
+
+.projects-page-table th,
+.projects-page-table td {
+    text-align: left;
+    padding: 15px;
+}
+
+.projects-page-table tr:nth-child(even) {
+    background-color: var(--primary-background-colour);
+}
+
+.projects-page-table th {
+    background-color: black;
+    color: white;
+}
+
+.projects-page-table img {
+    width: 300px;
+    /* or any other size */
+    height: auto;
+}
+
+.project-page-table-description {
+    color: var(--intro-text);
+}
+
+.project-page-table-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-page-table-item-container {
+    text-align: left;
+    width: 200px;
+}
+
+.project-page-footer-left {
+    margin-left: 30px;
+    /* align to the left */
+    text-align: left;
+}
+
+.project-page-footer-content {
+    border-top: 1px solid var(--image-outline);
+    align-items: flex-start;
+}
+
+.project-page-footer-section {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-top: 20px;
+}
+
+.project-page-footer-blurb {
+    /* border: 1px solid black; */
+    width: 50%;
+    justify-content: left;
+    margin-right: 30px;
 }
