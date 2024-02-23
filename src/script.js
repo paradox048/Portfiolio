@@ -90,8 +90,9 @@ if (window.innerWidth > 1200) {
 }
 
 const g_themeToggler = document.getElementById("theme-toggler");
+let g_themeToggleIcon = document.getElementById("theme-toggler-icon");
+
 document.addEventListener("DOMContentLoaded", function () {
-  let themeToggleIcon = document.getElementById("theme-toggler-icon");
   const savedTheme = localStorage.getItem("theme") || "light";
 
   // check if the theme is saved in the local storage and set the theme accordingly
@@ -115,16 +116,17 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("theme", targetTheme);
     updateIcon(targetTheme);
   });
-  function updateIcon(theme) {
-    if (theme === "dark") {
-      themeToggleIcon.classList.remove("fa-moon"); // Show moon in dark mode
-      themeToggleIcon.classList.add("fa-sun");
-    } else {
-      themeToggleIcon.classList.remove("fa-sun"); // Show sun in light mode
-      themeToggleIcon.classList.add("fa-moon");
-    }
-  }
 });
+
+function updateIcon(theme) {
+  if (theme === "dark") {
+    g_themeToggleIcon.classList.remove("fa-moon"); // Show moon in dark mode
+    g_themeToggleIcon.classList.add("fa-sun");
+  } else {
+    g_themeToggleIcon.classList.remove("fa-sun"); // Show sun in light mode
+    g_themeToggleIcon.classList.add("fa-moon");
+  }
+}
 
 // Check if the page is loaded from the cache or note
 window.addEventListener("pageshow", function () {
