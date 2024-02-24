@@ -598,3 +598,16 @@ footer {
     }
 
 }
+
+@media only screen and (min-width: 1100px) {
+
+    /* make the margin after header larger */
+    .hidden-name {
+        display: none;
+    }
+
+    .info-container-intro {
+        padding-bottom: 200px;
+    }
+
+}

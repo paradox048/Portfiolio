@@ -7,15 +7,14 @@ aboutBtn.addEventListener("click", function () {
   scrollTo(0, 0);
   history.pushState(null, null, "#info");
 });
-
 const projectsBtn = document.querySelector("#menu-button-projects");
 projectsBtn.addEventListener("click", function () {
-  window.location.href = "#projects";
+  document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
 });
 
-const experiencebtn = document.querySelector("#menu-button-experience");
-experiencebtn.addEventListener("click", function () {
-  window.location.href = "#experience";
+const experienceBtn = document.querySelector("#menu-button-experience");
+experienceBtn.addEventListener("click", function () {
+  document.getElementById("experience").scrollIntoView({ behavior: "smooth" });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -37,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Calculate the visible height of the section
       const visibleHeight =
         Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+      // if at the top of the screen always highlight only the info box
 
       // Update if this section is more visible than the previous most visible section
       if (visibleHeight > maxVisibleHeight) {
