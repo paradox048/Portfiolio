@@ -10,7 +10,7 @@
     <script>
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
-        } else if (localStorage.getItem('theme') === 'light') {
+        } else {
             document.documentElement.setAttribute('data-theme', 'light');
         }
     </script>
@@ -19,8 +19,15 @@
 <body>
     <div class="projects-page-container">
         <div class="projects-page-introduction">
-            <div class="name">Projects</div>
-            <div class="projects-page-subheading">
+            <div class="projects-page-title">
+                <div class="projects-page-title-heading">My <span
+                        id="projects-page-heading-changing_text">Projects</span>
+                </div>
+            </div>
+            <div id="experience-subheading" class="projects-page-subheading">Here are my current Co-op experiences and
+                internships. More to come soon!
+            </div>
+            <div id="project-subheading" class="projects-page-subheading">
                 I like building a vast variety of things, from IoT to Web
                 pages, I'm always curious about how things work. I love
                 bringing my imagination to life. if you would like to look
@@ -39,7 +46,7 @@
         </div>
 
 
-        <table class="projects-page-table">
+        <table id="projects-page-projects_list" class="projects-page-table">
 
             <tr>
                 <td><img src="../../images/test.png" alt="Project Image"></td>
@@ -104,17 +111,6 @@
                 <td><img src="../../images/test.png" alt="Project Image"></td>
                 <td>
                     <div class="project-page-table-item-container">
-                        <div class="project-page-table-title">Convex-Hall Algorithm</div>
-                        <div class="project-page-table-description">My Portfolio Page</div>
-                    </div>
-                </td>
-                <td>HTML, CSS, JavaScript</td>
-
-            </tr>
-            <tr>
-                <td><img src="../../images/test.png" alt="Project Image"></td>
-                <td>
-                    <div class="project-page-table-item-container">
                         <div class="project-page-table-title">Molecule Viewer</div>
                         <div class="project-page-table-description">My Portfolio Page</div>
                     </div>
@@ -157,16 +153,28 @@
                 <td>HTML, CSS, JavaScript</td>
 
             </tr>
-            <!-- Repeat <tr>...</tr> for each project -->
         </table>
-        <div class="projects-page-experience-container">
-            Experience
-        </div>
+        <table id="projects-page-experience_list" class="projects-page-table">
+
+            <tr>
+                <td><img src="../../images/test.png" alt="Project Image"></td>
+                <td>
+                    <div class="project-page-table-item-container">
+                        <div class="project-page-table-title">Student IT Technician</div>
+                        <div class="project-page-table-description">Current Job
+                        </div>
+                    </div>
+                </td>
+                <td>2024 - Present</td>
+            </tr>
+        </table>
 
         <footer>
             <div class="project-page-footer-content">
                 <div class="project-page-footer-section">
                     <div class="project-page-footer-left">
+                        <!-- Home icon -->
+
                         <!-- light and dark mode icons -->
                         <div class="system-theme-light-dark"><i id="theme-toggler-icon" class="far fa-moon"></i>
                             <span id="theme-toggler"> Dark Mode</span>
@@ -178,6 +186,8 @@
                                 <i class="far fa-envelope"></i><span> Email</span>
                             </a>
                         </div>
+
+
                     </div>
                     <!-- text blurb -->
                     <div class="project-page-footer-blurb">

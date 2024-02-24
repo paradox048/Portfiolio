@@ -455,7 +455,6 @@ footer {
     width: 50%;
     /* Adjust based on your preference */
     border: 1px solid var(--table-line-theme);
-    /* Light grey border */
 }
 
 .projects-page-table th,
@@ -546,12 +545,32 @@ footer {
     color: var(--inactive-text-colour);
 }
 
-.projects-page-subheading a span {
+.projects-page-subheading a {
     text-decoration: underline;
     font-size: 1.2em;
     color: var(--primary-text-colour);
+    cursor: pointer;
+
 }
 
-.projects-page-subheading:hover a span {
+/* projects page github */
+.projects-page-subheading a:hover {
     color: grey;
+}
+
+.projects-page-title {
+    display: flex;
+    justify-content: flex-start;
+    /* Align items to the start of the container */
+    width: 100%;
+    /* Or a specific width that fits your layout */
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 60px;
+    /* make italic */
+}
+
+#experience-subheading {
+    display: none;
 }

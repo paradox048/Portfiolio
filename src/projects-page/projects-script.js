@@ -56,6 +56,7 @@ const experienceBtn = document.getElementById("project-page-experience-btn");
 // on the load in make sure that the project button is active
 projectBtn.classList.add("active-project-page-btn");
 experienceBtn.classList.add("inactive-project-page-btn");
+projectHeading = document.getElementById("projects-page-heading-changing_text");
 
 // on click of the project button make sure that the project button is active and the experience button is inactive
 // then show the project section and hide the experience section
@@ -63,20 +64,51 @@ projectBtn.addEventListener("click", function () {
   if (projectBtn.classList.contains("inactive-project-page-btn")) {
     projectBtn.classList.remove("inactive-project-page-btn");
   }
+
+  // display the list if display is none
+  if (
+    document.getElementById("projects-page-projects_list").style.display ===
+    "none"
+  ) {
+    document.getElementById("projects-page-projects_list").style.display =
+      "block";
+    document.getElementById("project-subheading").style.display = "block";
+  }
+
   projectBtn.classList.add("active-project-page-btn");
   experienceBtn.classList.remove("active-project-page-btn");
   experienceBtn.classList.add("inactive-project-page-btn");
-
-  // load in the projects section if not already loaded
-  // check if the display is none and if it is then load in the projects section
+  projectHeading.textContent = "Projects";
+  document.getElementById("projects-page-experience_list").style.display =
+    "none";
+  document.getElementById("experience-subheading").style.display = "none";
 });
 
 experienceBtn.addEventListener("click", function () {
   if (experienceBtn.classList.contains("inactive-project-page-btn")) {
     experienceBtn.classList.remove("inactive-project-page-btn");
   }
+
+  // display the list if display is none
+  if (
+    document.getElementById("projects-page-experience_list").style.display ===
+    "none"
+  ) {
+    document.getElementById("projects-page-experience_list").style.display =
+      "block";
+  }
+  document.getElementById("experience-subheading").style.display = "block";
   experienceBtn.classList.add("active-project-page-btn");
 
   projectBtn.classList.remove("active-project-page-btn");
   projectBtn.classList.add("inactive-project-page-btn");
+  projectHeading.textContent = "Experience";
+
+  // hide the projects section and show the experience section
+  document.getElementById("projects-page-projects_list").style.display = "none";
+  // change projects-page-subheading to new blurb
+  // change the subheading to the new blurb
+  document.getElementById("project-subheading").style.display = "none";
 });
+
+// make the text My target to home
