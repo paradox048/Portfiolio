@@ -368,7 +368,7 @@ button:hover:after {
     margin: 0;
 }
 
-.experience-name {
+.hidden-name {
     /* hidden display */
     display: none;
 }
@@ -580,28 +580,7 @@ footer {
 
 /* Base styles that apply to all screen sizes */
 
-/* Small devices (phones, 600px and down) */
-@media only screen and (max-width: 1200px) {
-    body {
-        font-size: 14px;
-    }
 
-    .projects-page-container,
-    .projects-page-introduction,
-    footer {
-        width: 100%;
-        margin: 10px;
-    }
-
-    .projects-page-table {
-        width: 100%;
-    }
-
-    .menu-box {
-        display: none;
-        /* Hide navigation menu on small screens */
-    }
-}
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (max-width: 1100px) {
@@ -622,17 +601,4 @@ footer {
         /* Hide navigation menu on small screens */
     }
 
-}
-
-/* Large devices (desktops, 992px and up) */
-@media only screen and (min-width: 1300px) {
-    body {
-        font-size: 18px;
-    }
-
-    .hidden-name {
-        display: none;
-    }
-
-    /* Adjust styles for desktops here */
 }
