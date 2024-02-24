@@ -252,8 +252,10 @@ button:hover:after {
     margin-right: 20px;
     margin-top: 20px;
     border: 2px solid rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 10px;
 }
+
+
 
 .project-box-header {
     padding-top: 0px;
@@ -473,7 +475,7 @@ footer {
 }
 
 .projects-page-table img {
-    width: 300px;
+    width: 80%;
     /* or any other size */
     height: auto;
 }
@@ -490,6 +492,10 @@ footer {
 .project-page-table-item-container {
     text-align: left;
     width: 200px;
+}
+
+footer {
+    width: 50%;
 }
 
 .project-page-footer-left {
@@ -515,6 +521,7 @@ footer {
     width: 50%;
     justify-content: left;
     margin-right: 30px;
+    text-align: left;
 }
 
 .project-page-experience_projects-btn-container {
@@ -571,6 +578,52 @@ footer {
     /* make italic */
 }
 
-#experience-subheading {
-    display: none;
+/* Base styles that apply to all screen sizes */
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+
+    .projects-page-container,
+    .projects-page-introduction,
+    footer {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .projects-page-table {
+        width: 100%;
+    }
+
+    .menu-box {
+        display: none;
+        /* Hide navigation menu on small screens */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+
+    /* Adjust styles for tablets here */
+    .hidden-name {
+        display: block;
+        margin-top: 2em;
+        text-align: center;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body {
+        font-size: 18px;
+    }
+
+    /* Adjust styles for desktops here */
 }

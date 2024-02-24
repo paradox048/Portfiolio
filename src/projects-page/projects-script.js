@@ -25,6 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("theme", targetTheme);
     updateIcon(targetTheme);
   });
+
+  if (
+    document.getElementById("projects-page-projects_list").style.display !==
+    "none"
+  ) {
+    animateTableRows("projects-page-projects_list");
+  } else {
+    animateTableRows("projects-page-experience_list");
+  }
 });
 
 function updateIcon(theme) {
@@ -57,6 +66,7 @@ const experienceBtn = document.getElementById("project-page-experience-btn");
 projectBtn.classList.add("active-project-page-btn");
 experienceBtn.classList.add("inactive-project-page-btn");
 projectHeading = document.getElementById("projects-page-heading-changing_text");
+document.getElementById("projects-page-experience_list").style.display = "none";
 
 // on click of the project button make sure that the project button is active and the experience button is inactive
 // then show the project section and hide the experience section
@@ -82,6 +92,7 @@ projectBtn.addEventListener("click", function () {
   document.getElementById("projects-page-experience_list").style.display =
     "none";
   document.getElementById("experience-subheading").style.display = "none";
+  animateTableRows("projects-page-projects_list");
 });
 
 experienceBtn.addEventListener("click", function () {
@@ -109,6 +120,22 @@ experienceBtn.addEventListener("click", function () {
   // change projects-page-subheading to new blurb
   // change the subheading to the new blurb
   document.getElementById("project-subheading").style.display = "none";
+  animateTableRows("projects-page-experience_list");
 });
 
 // make the text My target to home
+
+function animateTableRows(tableId) {
+  // Select all table rows within the specified table
+  gsap.fromTo(
+    `#${tableId} tr`,
+    { y: 20, opacity: 0 }, // Starting position - slightly down and invisible
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.1, // Stagger the start of each animation
+      duration: 0.5, // Duration of each animation
+      ease: "power1.out", // Easing function for a smooth effect
+    },
+  );
+}
