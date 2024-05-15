@@ -55,7 +55,7 @@ a:hover,
 a:active {
     text-decoration: none;
     color: var(--blue-fill);
-}
+} 
 
 ::-webkit-scrollbar {
     width: 2px;
@@ -165,7 +165,7 @@ button span {
     padding-right: 0.5em;
 }
 
-button:after {
+.btn-fill:after {
     content: "";
     position: absolute;
     top: 0;
@@ -177,7 +177,7 @@ button:after {
     transition: all 0.3s;
 }
 
-button:hover {
+.btn-fill:hover {
     color: var(--primary-background);
 }
 
@@ -245,6 +245,7 @@ button:hover:after {
     /* move the box to the left */
     transition: 0.3s;
 }
+
 
 .project-box-images {
     width: 150px;
@@ -362,7 +363,7 @@ button:hover:after {
 }
 
 .experience-box-header {
-    align-item: flex-start;
+    align-items: flex-start;
     padding-bottom: 20px;
     /* border: 1px solid black; */
     margin: 0;
@@ -388,7 +389,6 @@ footer {
     /* align-items: center; */
     margin-top: 20px;
     margin-left: 30px;
-    dd
 }
 
 .email-container {
@@ -448,7 +448,13 @@ footer {
     text-align: center;
     margin-top: 20px;
     /* border: 1px solid black; */
+}
 
+.projects-page-container tr:hover {
+    box-shadow: 0px 0px 10px rgba(116, 116, 116);
+    transform: translateY(-5px);
+    /* move the box to the left */
+    transition: 0.3s;
 }
 
 .projects-page-table {
@@ -493,6 +499,7 @@ footer {
     text-align: left;
     width: 200px;
 }
+
 
 .project-page-footer-left {
     margin-left: 30px;
@@ -574,10 +581,24 @@ footer {
     /* make italic */
 }
 
+/* Student IT Technician Page ********************************************************************************************************************* */
+
+.student-technician-page_headers {
+    font-size: 30px;
+}
+
+.student-technician-page_subtext {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
 /* Base styles that apply to all screen sizes */
-
-
-
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (max-width: 1100px) {
     body {
