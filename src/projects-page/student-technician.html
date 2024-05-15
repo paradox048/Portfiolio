@@ -15,112 +15,45 @@
         }
     </script>
     <style>
-        body {
-            transition: background-color 0.3s, color 0.3s;
-            font-family: Arial, sans-serif;
-            line-height: 1.5;
-        }
-
-        .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-            color: #007BFF;
-            transition: transform 0.6s ease;
-        }
-
-        .back-button i {
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover i {
-            animation: rainbow 1s infinite linear;
-        }
-
-        .rotate-once {
-            animation: rotate360 0.6s ease;
-        }
-
-        @keyframes rotate360 {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes rainbow {
-            0% {
-                filter: hue-rotate(0deg);
-            }
-            100% {
-                filter: hue-rotate(360deg);
-            }
-        }
-
-        .student-technician-page_headers {
-            cursor: pointer;
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin-bottom: 5px;
-            background-color: #f9f9f9;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .student-technician-page_headers:hover {
-            background-color: #f1f1f1;
-        }
-
-        .student-technician-page_subtext {
-            display: none;
-            padding: 10px;
-            border-left: 2px solid #ccc;
-            margin-bottom: 10px;
-            line-height: 2;
-        }
-
-        .active .student-technician-page_subtext {
-            display: block;
-        }
-
-        [data-theme='dark'] .student-technician-page_headers {
-            background-color: #333;
-            color: #fff;
-            border: 1px solid #555;
-        }
-
-        [data-theme='dark'] .student-technician-page_headers:hover {
-            background-color: #444;
-        }
-
-        [data-theme='dark'] .student-technician-page_subtext {
-            border-left: 2px solid #555;
+        #my-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Initially send the canvas to the back */
+            pointer-events: none;
+            /* Prevent the canvas from blocking other elements */
         }
     </style>
 </head>
 
 <body>
-    <button class="back-button" id="back-button" onclick="window.location.href='projects-page.html'">
-        <i class="fas fa-arrow-left"></i>
-    </button>
-    <div class="technician-page-container">
-        <div class="projects-page-introduction">
-            <div class="projects-page-title">
-                <div class="projects-page-title-heading">Student IT Technician Work Term Report</div>
-            </div>
-        </div>
+    <div class="student-technician-page-container">
+        <button class="back-button" id="back-button" onclick="window.location.href='projects-page.html'">
+            <i id="left-back-arrow" class="fas fa-arrow-left"></i>
+        </button>
 
+        <div class="student-technician-page_title">
+            Student IT Technician Work Term Report
+        </div>
+        <!-- Point where the confetti generation starts -->
+        <canvas id="my-canvas"></canvas>
         <!-- Introduction -->
-        <div class="student-technician-page_headers">
+        <div class="student-technician-page_headers active">
             University of Guelph Managed Desktop IT Technician
+
             <div class="student-technician-page_subtext">
-                The University of Guelph in Ontario is a renowned public research institution celebrated for its academic excellence and innovation. The IT team at the University of Guelph, specifically within the Computing and Communications Services (CCS) department, is dedicated to providing comprehensive technical support and innovative solutions to enhance the university's technological infrastructure. This team plays a crucial role in maintaining and managing the university's networked systems, personal computers, and software applications.
+                The University of Guelph in Ontario is a renowned public research institution celebrated for its
+                academic excellence and innovation. The IT team at the University of Guelph, specifically within the
+                Computing and Communications Services (CCS) department, is dedicated to providing comprehensive
+                technical support and innovative solutions to enhance the university's technological infrastructure.
+                This team plays a crucial role in maintaining and managing the university's networked systems, personal
+                computers, and software applications.
+                <img class="student-technician-page_img" src="../../images/johnston-hall-banner.webp" />
             </div>
+
         </div>
 
         <!-- Background -->
@@ -128,54 +61,113 @@
             My Job
             <div class="student-technician-page_subtext">
                 <p>
-                    As a Student IT Technician at the University of Guelph, reporting to the CCS Manager, Client Productivity, my role was integral to the Managed Desktops service within the Computing and Communications Services (CCS) department. I provided high-quality technical support to clients, addressing a variety of technical issues related to both hardware and software.
+                    As a Student IT Technician at the University of Guelph, reporting to the CCS Manager, Client
+                    Productivity, my role was integral to the Managed Desktops service within the Computing and
+                    Communications Services (CCS) department. I provided high-quality technical support to clients,
+                    addressing a variety of technical issues related to both hardware and software.
                 </p>
                 <h2>Day-to-Day Responsibilities</h2>
                 <ul>
-                    <li><strong>Ticket Handling</strong>: Utilized BMC FootPrints to manage and resolve support tickets efficiently. This involved tracking and documenting issues from initial report to resolution.
+                    <li><strong>Ticket Handling</strong>: Utilized BMC FootPrints to manage and resolve support tickets
+                        efficiently. This involved tracking and documenting issues from initial report to resolution.
                     </li>
-                    <li><strong>Technical Support</strong>: Provided comprehensive support for networked Windows and Mac personal computers. This included diagnosing and solving software and hardware problems, such as system failures, application errors, and peripheral issues.
+                    <li><strong>Technical Support</strong>: Provided comprehensive support for networked Windows and Mac
+                        personal computers. This included diagnosing and solving software and hardware problems, such as
+                        system failures, application errors, and peripheral issues.
                     </li>
-                    <li><strong>Customer Interfacing</strong>: Interacted with clients to understand their technical problems and provide effective solutions, ensuring high levels of customer satisfaction.
+                    <li><strong>Customer Interfacing</strong>: Interacted with clients to understand their technical
+                        problems and provide effective solutions, ensuring high levels of customer satisfaction.
                     </li>
-                    <li><strong>Problem Diagnosis and Resolution</strong>: Diagnosed issues with software and hardware, implementing fixes or coordinating with vendors for more complex problems.
+                    <li><strong>Problem Diagnosis and Resolution</strong>: Diagnosed issues with software and hardware,
+                        implementing fixes or coordinating with vendors for more complex problems.
                     </li>
-                    <li><strong>Utilizing Collaboration Tools</strong>: Regularly used Microsoft Teams for communication and collaboration with team members and clients.
+                    <li><strong>Utilizing Collaboration Tools</strong>: Regularly used Microsoft Teams for communication
+                        and collaboration with team members and clients.
                     </li>
-                    <li><strong>Hardware Management</strong>: Performed hardware installations, configurations, and replacements. This included setting up new systems and troubleshooting existing ones.
+                    <li><strong>Hardware Management</strong>: Performed hardware installations, configurations, and
+                        replacements. This included setting up new systems and troubleshooting existing ones.
                     </li>
-                    <li><strong>Process Improvement</strong>: Participated in designing, implementing, and documenting process improvements to enhance service efficiency and effectiveness.
+                    <li><strong>Process Improvement</strong>: Participated in designing, implementing, and documenting
+                        process improvements to enhance service efficiency and effectiveness.
                     </li>
-                    <li><strong>Training and Support</strong>: Provided training and support to clients to help them effectively use their computing infrastructure and tools.
+                    <li><strong>Training and Support</strong>: Provided training and support to clients to help them
+                        effectively use their computing infrastructure and tools.
                     </li>
-                    <li><strong>Inventory Management</strong>: Maintained computer inventory and ensured all records were up-to-date within the support ticket system.
+                    <li><strong>Inventory Management</strong>: Maintained computer inventory and ensured all records
+                        were up-to-date within the support ticket system.
                     </li>
                 </ul>
                 <h2>Skills and Strengths</h2>
                 <ul>
-                    <li><strong>Technical Expertise</strong>: Developed a solid understanding of workstation operating systems including Windows and macOS, and gained experience with printing and USB peripherals.
+                    <li><strong>Technical Expertise</strong>: Developed a solid understanding of workstation operating
+                        systems including Windows and macOS, and gained experience with printing and USB peripherals.
                     </li>
-                    <li><strong>Security Proficiency</strong>: Handled malware and antivirus remediation, ensuring systems were secure and protected.</li>
-                    <li><strong>Interpersonal Skills</strong>: Demonstrated excellent interpersonal, team, and communication skills, essential for effective customer service and teamwork.</li>
-                    <li><strong>IT Issue Tracking</strong>: Experienced in working with IT issue tracking systems, specifically BMC FootPrints, to manage and resolve support tickets efficiently.</li>
-                    <li><strong>Service Culture and Core Values</strong>: Committed to the core values of CCS, including Service Culture, Integrity, Individual Leadership, Teamwork, Agility, and Communication.</li>
+                    <li><strong>Security Proficiency</strong>: Handled malware and antivirus remediation, ensuring
+                        systems were secure and protected.</li>
+                    <li><strong>Interpersonal Skills</strong>: Demonstrated excellent interpersonal, team, and
+                        communication skills, essential for effective customer service and teamwork.</li>
+                    <li><strong>IT Issue Tracking</strong>: Experienced in working with IT issue tracking systems,
+                        specifically BMC FootPrints, to manage and resolve support tickets efficiently.</li>
+                    <li><strong>Service Culture and Core Values</strong>: Committed to the core values of CCS, including
+                        Service Culture, Integrity, Individual Leadership, Teamwork, Agility, and Communication.</li>
                 </ul>
                 <h2>Work Environment</h2>
-                <p><strong>On-Site Work</strong>: All work was performed on-site, ensuring hands-on support and immediate assistance for any technical issues.</p>
-                <p>This position provided a valuable opportunity to develop customer service skills, expand technical knowledge, and gain experience in managing large numbers of personal computers in an Active Directory environment through policy-driven automation techniques.</p>
+                <p><strong>On-Site Work</strong>: All work was performed on-site, ensuring hands-on support and
+                    immediate assistance for any technical issues.</p>
+                <p>This position provided a valuable opportunity to develop customer service skills, expand technical
+                    knowledge, and gain experience in managing large numbers of personal computers in an Active
+                    Directory environment through policy-driven automation techniques.</p>
             </div>
         </div>
 
         <!-- Goals -->
         <div class="student-technician-page_headers">
-            Goals
+            Goals & Reflections
             <div class="student-technician-page_subtext">
                 <ol>
-                    <li>One of my personal goals during my time as an IT Technician was to develop my <strong>Independence, problem solving, and critical thinking</strong> skills. Through the term I made sure that before asking for any help I would try to make sure to attack the problem through two or three angles. This goal was related to my job task as when diagnosing and solving problems I did not always have my supervisor or a manager to help me out. Developing a strong set of problem solving skills allowed me to become independent and efficient in all my tasks. Reflecting on this goal I found that it was very useful in helping me develop independence and critical thinking. Making sure that I try to solve the problem with at least 3 methods allowed me to develop my problem solving skills and gain familiarity regarding my job. Furthermore, I found that it helped me remember the steps to solve the problem much better than when I would ask right away. The measure of success was a bit more convoluted as I believe that the term simpler is up to interpretation. For my measure of success I should have been more specific on what I mean "simpler problem" as a simpler problem for someone else may be much more complicated for the other person. I believe that this was an important goal that I reached during the work term and hope to continue improving on my problem solving and critical thinking skills for the future.
+                    <li>One of my personal goals during my time as an IT Technician was to develop my
+                        <strong>Independence, problem solving, and critical thinking</strong> skills. Through the term I
+                        made sure that before asking for any help I would try to make sure to attack the problem through
+                        two or three angles. This goal was related to my job task as when diagnosing and solving
+                        problems I did not always have my supervisor or a manager to help me out. Developing a strong
+                        set of problem solving skills allowed me to become independent and efficient in all my tasks.
+                        Reflecting on this goal I found that it was very useful in helping me develop independence and
+                        critical thinking. Making sure that I try to solve the problem with at least 3 methods allowed
+                        me to develop my problem solving skills and gain familiarity regarding my job. Furthermore, I
+                        found that it helped me remember the steps to solve the problem much better than when I would
+                        ask right away. The measure of success was a bit more convoluted as I believe that the term
+                        simpler is up to interpretation. For my measure of success I should have been more specific on
+                        what I mean "simpler problem" as a simpler problem for someone else may be much more complicated
+                        for the other person. I believe that this was an important goal that I reached during the work
+                        term and hope to continue improving on my problem solving and critical thinking skills for the
+                        future.
                     </li>
-                    <li>My second goal of the term was to improve on my <strong>communication and teamwork skills</strong>. My goal was to make sure that I would check in with my teammates at least three times every day. This goal was important for my job as we often had to travel in teams and plan out our daily schedules to make sure that one person was in office at all times. Making sure that everyone was up to date with everyone's schedules and needs was an important factor in our day-to-day. Upon reflecting on this goal, I found that it was not necessary as time went on. As both my teammates and I had more familiarity with the job it became tedious to check in with each other. In addition, with how we communicated we ended up already checking on each other. There was no need to make a conscious effort to check in three separate times. While the initial goal became tedious after the initial months, I believe that my measure of success was useful. Checking in with my teammates at the end of the week helped me make sure that everything was on track and made sure that everyone was kept in the loop. In the end, I found that I would change the goal so that it was to make sure that I communicate any changes or any events to my teammates as I believe that that would be more useful in the long run.
+                    <li>My second goal of the term was to improve on my <strong>communication and teamwork
+                            skills</strong>. My goal was to make sure that I would check in with my teammates at least
+                        three times every day. This goal was important for my job as we often had to travel in teams and
+                        plan out our daily schedules to make sure that one person was in office at all times. Making
+                        sure that everyone was up to date with everyone's schedules and needs was an important factor in
+                        our day-to-day. Upon reflecting on this goal, I found that it was not necessary as time went on.
+                        As both my teammates and I had more familiarity with the job it became tedious to check in with
+                        each other. In addition, with how we communicated we ended up already checking on each other.
+                        There was no need to make a conscious effort to check in three separate times. While the initial
+                        goal became tedious after the initial months, I believe that my measure of success was useful.
+                        Checking in with my teammates at the end of the week helped me make sure that everything was on
+                        track and made sure that everyone was kept in the loop. In the end, I found that I would change
+                        the goal so that it was to make sure that I communicate any changes or any events to my
+                        teammates as I believe that that would be more useful in the long run.
                     </li>
-                    <li>My third goal for the co-op was to learn more about <strong>Windows and Mac software</strong> as well as learn about <strong>computer hardware</strong>. I planned to reach this goal by keeping a notebook handy that I could write down any useful shortcuts, solutions, or new hardware that I didn't know about before. This goal aligns with my job as by gaining familiarity with both software and hardware has allowed me to become much more efficient with my job and my solutions. Furthermore, keeping a notebook handy allows me to quickly reference any knowledge that I may have forgotten. Reflecting on this goal, I found that this goal was quite useful as it allowed me to keep track of all necessary shortcuts that I needed. In addition, having references to all my solutions and shortcuts was an important piece of documentation that I utilized a lot. I found that while in the beginning I was constantly writing in my notebook at a certain point I was not writing in my notebook anymore.
+                    <li>My third goal for the co-op was to learn more about <strong>Windows and Mac software</strong> as
+                        well as learn about <strong>computer hardware</strong>. I planned to reach this goal by keeping
+                        a notebook handy that I could write down any useful shortcuts, solutions, or new hardware that I
+                        didn't know about before. This goal aligns with my job as by gaining familiarity with both
+                        software and hardware has allowed me to become much more efficient with my job and my solutions.
+                        Furthermore, keeping a notebook handy allows me to quickly reference any knowledge that I may
+                        have forgotten. Reflecting on this goal, I found that this goal was quite useful as it allowed
+                        me to keep track of all necessary shortcuts that I needed. In addition, having references to all
+                        my solutions and shortcuts was an important piece of documentation that I utilized a lot. I
+                        found that while in the beginning I was constantly writing in my notebook at a certain point I
+                        was not writing in my notebook anymore.
                     </li>
                 </ol>
             </div>
@@ -185,15 +177,30 @@
         <div class="student-technician-page_headers">
             Conclusion
             <div class="student-technician-page_subtext">
-                My experience as a Student IT Technician at the University of Guelph has been exceptionally rewarding. I have gained extensive knowledge and hands-on experience with hardware, operating systems, and customer service. Working with a variety of technologies and solving diverse technical issues has significantly broadened my technical expertise. One of the most valuable aspects of this role was the opportunity to be part of such a friendly and open team. The support and camaraderie among my colleagues made for a highly enjoyable and enriching work environment. I am very glad to have been a part of such a strong and collaborative team. The skills and knowledge I have acquired during my time here will undoubtedly benefit my future career as a developer and in the tech industry. The technical problem-solving, customer interaction, and teamwork experiences have equipped me with a solid foundation to excel in my future endeavors. I am grateful for the opportunity and confident that this experience will be a significant asset as I move forward in my professional journey.
+                My experience as a Student IT Technician at the University of Guelph has been exceptionally rewarding. I
+                have gained extensive knowledge and hands-on experience with hardware, operating systems, and customer
+                service. Working with a variety of technologies and solving diverse technical issues has significantly
+                broadened my technical expertise. One of the most valuable aspects of this role was the opportunity to
+                be part of such a friendly and open team. The support and camaraderie among my colleagues made for a
+                highly enjoyable and enriching work environment. I am very glad to have been a part of such a strong and
+                collaborative team. The skills and knowledge I have acquired during my time here will undoubtedly
+                benefit my future career as a developer and in the tech industry. The technical problem-solving,
+                customer interaction, and teamwork experiences have equipped me with a solid foundation to excel in my
+                future endeavors. I am grateful for the opportunity and confident that this experience will be a
+                significant asset as I move forward in my professional journey.
             </div>
         </div>
 
+
         <!-- Acknowledgements -->
-        <div class="student-technician-page_headers">
-            Acknowledgements
-            <div class="student-technician-page_subtext">
-                I want to give special thanks to my supervisor <strong> Haniya </strong> for such a smooth onboarding process and great work environment. I want to also give special thanks to my fellow co-ops <strong> Ethan, Edison, and Rhydan </strong> for making the co-op that much more enjoyable.
+        <div class="acknowledgements">
+            <div class="student-technician-page_headers">
+                Acknowledgements
+                <div class="student-technician-page_subtext">
+                    I want to give special thanks to my supervisor <strong> Haniya </strong> for such a smooth
+                    onboarding process and great work environment. I want to also give special thanks to my fellow
+                    co-ops <strong> Ethan, Edison, and Rhydan </strong> for making the co-op that much more enjoyable.
+                </div>
             </div>
         </div>
     </div>
@@ -208,58 +215,22 @@
                 <!-- email icon -->
                 <div class="email-container">
                     <a href="mailto:dduong03@uoguelph.ca" target="_blank">
-                        <i class="far fa-envelope"></i><span>Email</span>
+                        <i class="far fa-envelope"></i><span> Email</span>
                     </a>
                 </div>
             </div>
             <!-- text blurb -->
             <div class="project-page-footer-blurb">
-                Designed loosely in Figma, coded in Zed, and designed with love. Built with HTML, CSS, JavaScript, and GSAP
+                Designed loosely in Figma, coded in Zed, and designed with love. Built with HTML, CSS, JavaScript, and
+                GSAP
             </div>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const headers = document.querySelectorAll('.student-technician-page_headers');
-            headers.forEach(header => {
-                header.addEventListener('click', function () {
-                    this.classList.toggle('active');
-                });
-            });
-
-            const themeToggler = document.getElementById("theme-toggler");
-            const themeToggleIcon = document.getElementById("theme-toggler-icon");
-
-            themeToggler.addEventListener("click", function () {
-                const currentTheme = document.documentElement.getAttribute("data-theme");
-                const targetTheme = currentTheme === "dark" ? "light" : "dark";
-                document.documentElement.setAttribute("data-theme", targetTheme);
-                localStorage.setItem("theme", targetTheme);
-                themeToggleIcon.className = targetTheme === "dark" ? "far fa-sun" : "far fa-moon";
-                themeToggler.textContent = targetTheme === "dark" ? "Light Mode" : "Dark Mode";
-            });
-
-            const currentTheme = document.documentElement.getAttribute("data-theme");
-            themeToggleIcon.className = currentTheme === "dark" ? "far fa-sun" : "far fa-moon";
-            themeToggler.textContent = currentTheme === "dark" ? "Light Mode" : "Dark Mode";
-
-            const backButton = document.getElementById("back-button");
-            let firstHover = true;
-
-            backButton.addEventListener("mouseover", function () {
-                if (firstHover) {
-                    backButton.classList.add("rotate-once");
-                    backButton.addEventListener("animationend", function () {
-                        backButton.classList.remove("rotate-once");
-                    });
-                    firstHover = false;
-                }
-            });
-        });
-    </script>
+    <script src="index.min.js"></script>
+    <script src="student-tech-script.js"></script>
 </body>
 
 </html>
