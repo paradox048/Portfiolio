@@ -1,8 +1,23 @@
+
 const g_themeToggler = document.getElementById("theme-toggler");
 let g_themeToggleIcon = document.getElementById("theme-toggler-icon");
 
 document.addEventListener("DOMContentLoaded", function () {
-  const savedTheme = localStorage.getItem("theme") || "light";
+    // Back button hover effect
+    const backButton = document.getElementById("back-button");
+    let firstHover = true;
+    
+    backButton.addEventListener("mouseover", function () {
+        if (firstHover) {
+            backButton.classList.add("rotate-once");
+            backButton.addEventListener("animationend", function () {
+                backButton.classList.remove("rotate-once");
+            });
+            firstHover = false;
+        }
+    });
+
+    const savedTheme = localStorage.getItem("theme") || "light";
 
   // check if the theme is saved in the local storage and set the theme accordingly
   document.documentElement.setAttribute("data-theme", savedTheme);

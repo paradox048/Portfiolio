@@ -595,7 +595,7 @@ footer {
 }
 
 .back-button {
-    /* position: absolute; */
+     /*position: absolute; */
     top: 20px;
     left: 0px;
     background: none;
@@ -606,10 +606,7 @@ footer {
     transition: transform 0.6s ease;
     /* border: 2px solid white; */
 }
-/* 
-#left-back-arrow {
-    border: 2px solid white;
-} */
+ 
 
 .back-button i {
     transition: all 0.3s ease;
