@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script>
-        <!-- This handles the theme load in initially  -->
+        // <!-- This handles the theme load in initially  -->        
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
         } else {
             document.documentElement.setAttribute('data-theme', 'light');
         }
+        
     </script>
 </head>
 
@@ -30,9 +31,9 @@
                 </div>
 
                 <div class="menu-buttons">
-                    <button id="menu-button-info">Info</button>
-                    <button id="menu-button-projects">Projects</button>
-                    <button id="menu-button-experience">Experience</button>
+                    <button class="btn-fill" id="menu-button-info">Info</button>
+                    <button class="btn-fill" id="menu-button-projects">Projects</button>
+                    <button class="btn-fill" id="menu-button-experience">Experience</button>
                 </div>
                 <div class="socials-container">
                     <a href="https://www.linkedin.com/in/derek-duong-a891391ab/" target="_blank" class="social-link">
@@ -109,7 +110,7 @@
                 </a>
                 <a href="https://github.com/paradox048/molecule_viewer" target="_blank">
                     <div class="projects-box">
-                        <img class="project-box-images" src="/images/molecule-viewer.png" alt="test3" />
+                        <img class="project-box-images" src="../images/molecule-viewer.png" alt="test3" />
                         <div class="project-box-text">
                             <!-- generate lorem ipsum -->
                             <h2 class="project-box-header">Molecule Viewer</h2>
@@ -135,7 +136,7 @@
                 </a>
                 <a href="https://github.com/paradox048/MERN_Project_Management" target="_blank">
                     <div class="projects-box">
-                        <img class="project-box-images" src="/images/test3.png" alt="test3" />
+                        <img class="project-box-images" src="../images/test3.png" alt="test3" />
                         <div class="project-box-text">
                             <!-- generate lorem ipsum -->
                             <h2 class="project-box-header">MERN Stack Project Manager</h2>
@@ -159,12 +160,12 @@
                 </a>
                 <a href="https://github.com/paradox048/paradox048.github.io" target="_blank">
                     <div class="projects-box">
-                        <img class="project-box-images" src="/images/path-finder.png" alt="test3" />
+                        <img class="project-box-images" src="../images/path-finder.png" alt="test3" />
                         <div class="project-box-text">
                             <!-- generate lorem ipsum -->
                             <h2 class="project-box-header">React Visual Path Finder</h2>
                             <div class="project-box-descr">
-                                Developed a a visual path finder in react to find the shortest path between point A
+                                Developed a visual path finder in react to find the shortest path between point A
                                 to
                                 point
                                 B
@@ -178,7 +179,7 @@
                     </div>
                 </a>
                 <div class="more-container">
-                    <a class="more-link" href="projects-page/projects-page.html" projects-page">
+                    <a class="more-link" href="projects-page/projects-page.html" projects-page>
                         <div class="more-text">See more Projects <i class="fas fa-external-link-alt more-icon"></i>
                         </div>
                     </a>

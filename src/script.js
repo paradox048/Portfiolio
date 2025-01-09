@@ -1,3 +1,4 @@
+
 // when the button is clicked navigate to one part of the page
 const aboutBtn = document.querySelector("#menu-button-info");
 aboutBtn.addEventListener("click", function () {
@@ -74,7 +75,7 @@ if (window.innerWidth > 1200) {
     sections.forEach((section) => {
       gsap.from(section, {
         duration: 1, // Duration of the animation
-        opacity: 0, // Start with an opacity of 0
+        opacity: 1, // Start with an opacity of 1
         y: 50, // Start 50 pixels down from its original position
         ease: "easeInOut", // Use an easing function for a smooth effect
         scrollTrigger: {
